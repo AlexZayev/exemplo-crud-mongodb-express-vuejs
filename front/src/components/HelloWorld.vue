@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <h1>Gerenciamento de Usuários</h1>
-    <div class="container">
-      <table class="table">
+    <div>
+      <table>
       <thead>
         <tr>
           <th>nome</th>
@@ -17,27 +17,27 @@
           <td>{{ user.email }}</td>
           <td>{{ user.password }}</td>
           <td>
-            <a class="btn btn-danger" href="#" @click.prevent="remove(user._id)">x</a>
+            <a href="#" @click.prevent="remove(user._id)">x</a>
             -
-            <a class="btn btn-primary" href="#" @click.prevent="toUpdate(user)">update</a>
+            <a href="#" @click.prevent="toUpdate(user)">update</a>
           </td>
         </tr>
       </tbody>
     </table>
     <br>
     <form @submit.prevent="save()">
-      <div class="row">
-        <div class="col">
-          <input type="text" placeholder="Nome" v-model="toSave.name" class="form-control">
+      <div>
+        <div>
+          <input type="text" placeholder="Nome" v-model="toSave.name">
         </div>
-        <div class="col">
-          <input type="text" placeholder="Email" v-model="toSave.email" class="form-control">
+        <div>
+          <input type="text" placeholder="Email" v-model="toSave.email">
         </div>
-        <div class="col">
-          <input type="text" placeholder="Senha" v-model="toSave.password" class="form-control">
+        <div>
+          <input type="text" placeholder="Senha" v-model="toSave.password">
         </div>
-        <div class="col">
-          <input type="submit" value="+" class="btn btn-success">
+        <div>
+          <input type="submit" value="+">
         </div>
       </div>
     </form>
